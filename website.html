@@ -264,7 +264,7 @@ body {font-size:16px;}
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <p>It’s not too late to join OPRF Robotics! Go to the <a href="https://campussuite-storage.s3.amazonaws.com/prod/1558748/bd01c7ae-765f-11e9-9402-0a56f8be964e/2158308/d7de2020-f6a3-11ea-a22b-0a19f4b3c3d9/file/2020-2021%20Clubs%20and%20Activities%20Info%20Sheet%20-%20Club%20Info.pdf"> OPRF activities catalog</a> to learn how.</p>
     
-    <form method=”post” name=”contact_form” action=”contact-form-handler.php”>
+    <!--<form action="/action_page.php" target="_blank">
       <div class="w3-section">
         <label>Name</label>
         <input class="w3-input w3-border" type="text" name="Name" required>
@@ -277,51 +277,11 @@ body {font-size:16px;}
         <label>Message</label>
         <input class="w3-input w3-border" type="text" name="Message" required>
       </div>
-      <input type="submit" value="Submit">
     </form>
-      
-      <!--<a href="" style="text-decoration:none"> <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>-->
+      <a href="" style="text-decoration:none"> <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
       </a>  
-  </div>
-  
-  <script language=”JavaScript”>
-    var frmvalidator = new Validator(“contactform”); 
-    frmvalidator.addValidation(“name”,”req”,”Please provide your name”); 
-    frmvalidator.addValidation(“email”,”req”,”Please provide your email”); 
-    frmvalidator.addValidation(“email”,”email”, “Please enter a valid email address”); 
-  </script>
+  </div>-->
 
-  <?php
-    $errors = ”;
-    $myemail = ‘11mkm6@gmail.com’;
-    if(empty($_POST[‘name’]) ||
-    empty($_POST[’email’]) ||
-    empty($_POST[‘message’]))
-    {
-    $errors .= “\n Error: all fields are required”;
-    }
-    $name = $_POST[‘name’];
-    $email_address = $_POST[’email’];
-    $message = $_POST[‘message’];
-    if (!preg_match(“/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i”, $email_address))
-    {
-    $errors .= “\n Error: Invalid email address”;
-    }
-    if( empty($errors))
-    {
-    $to = $myemail;
-    $email_subject = “Contact form submission: $name”;
-    $email_body = “You have received a new message. “.
-    ” Here are the details:\n Name: $name \n “.
-    “Email: $email_address\n Message \n $message”;
-    $headers = “From: $myemail\n”;
-    $headers .= “Reply-To: $email_address”;
-    mail($to,$email_subject,$email_body,$headers);
-    //redirect to the ‘thank you’ page
-    header(‘Location: contact-form-thank-you.html’);
-    }
-?>
-  
 <!-- End page content -->
 </div>
 
