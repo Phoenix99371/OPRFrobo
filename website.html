@@ -23,7 +23,7 @@ body {font-size:16px;}
     <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About Robotics Club</a> 
     <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Current Season</a> 
     <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Our Members</a> 
-    <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Fundraiser</a> 
+    <!--<a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Fundraiser</a> -->
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Joining</a>
   </div>
 </nav>
@@ -46,7 +46,6 @@ body {font-size:16px;}
     <h1 class="w3-xxxlarge w3-text-red"><b>About Robotics Club</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     
-    <p align="center">
     <iframe 
             width="560" 
             height="315"
@@ -137,9 +136,9 @@ body {font-size:16px;}
     <h1 class="w3-xxxlarge w3-text-red"><b>Our Members</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <h4>CLUB LEADERS</h4>
-    <p> Social Media Manager: Eva, Isaac, & Kellen<p>
-    <p>Fundraising Director: Lilly</p>
-    <p>Website Designer: Emily & Maeve</p>
+    <p> Social Media Managers: Eva, Isaac, & Kellen<p>
+    <!--<p>Fundraising Director: Lilly</p>-->
+    <p>Website Designers: Emily & Maeve</p>
     <p>Sponsers: Ms. Kaiser & Ms. Cermack</p>
     <h4>VARSITY TEAMS</h4>
   </div>
@@ -210,12 +209,12 @@ body {font-size:16px;}
     </div>
   </div>
 
-  <!-- Packages / Pricing Tables -->
+  <!-- Packages / Pricing Tables
   <div class="w3-container" id="packages" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Fundraiser</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>Some text your prices. Lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>
-  </div>
+    <p>Info here.</p>
+  </div> -->
 
   <!--<div class="w3-row-padding">
     <div class="w3-half w3-margin-bottom">
@@ -238,7 +237,7 @@ body {font-size:16px;}
       </ul>
     </div>-->
         
-    <div class="w3-half">
+    <!--<div class="w3-half">
       <ul class="w3-ul w3-light-grey w3-center">
         <li class="w3-red w3-xlarge w3-padding-32">Option 2</li>
         <li class="w3-padding-16">Your description</li>
@@ -257,15 +256,15 @@ body {font-size:16px;}
         </li>
       </ul>
     </div>
-  </div>
+  </div>-->
   
   <!-- Contact -->
   <div class="w3-container" id="contact" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Joining</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <p>It’s not too late to join OPRF Robotics! Go to the <a href="https://campussuite-storage.s3.amazonaws.com/prod/1558748/bd01c7ae-765f-11e9-9402-0a56f8be964e/2158308/d7de2020-f6a3-11ea-a22b-0a19f4b3c3d9/file/2020-2021%20Clubs%20and%20Activities%20Info%20Sheet%20-%20Club%20Info.pdf"> OPRF activities catalog</a> to learn how.</p>
-    <!--
-    <form action="/action_page.php" target="_blank">
+    
+    <form method=”post” name=”contact_form” action=”contact-form-handler.php”>
       <div class="w3-section">
         <label>Name</label>
         <input class="w3-input w3-border" type="text" name="Name" required>
@@ -278,12 +277,51 @@ body {font-size:16px;}
         <label>Message</label>
         <input class="w3-input w3-border" type="text" name="Message" required>
       </div>
+      <input type="submit" value="Submit">
     </form>
-      -->
-      <a href="" style="text-decoration:none"> <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
+      
+      <!--<a href="" style="text-decoration:none"> <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>-->
       </a>  
   </div>
+  
+  <script language=”JavaScript”>
+    var frmvalidator = new Validator(“contactform”); 
+    frmvalidator.addValidation(“name”,”req”,”Please provide your name”); 
+    frmvalidator.addValidation(“email”,”req”,”Please provide your email”); 
+    frmvalidator.addValidation(“email”,”email”, “Please enter a valid email address”); 
+  </script>
 
+  <?php
+    $errors = ”;
+    $myemail = ‘11mkm6@gmail.com’;
+    if(empty($_POST[‘name’]) ||
+    empty($_POST[’email’]) ||
+    empty($_POST[‘message’]))
+    {
+    $errors .= “\n Error: all fields are required”;
+    }
+    $name = $_POST[‘name’];
+    $email_address = $_POST[’email’];
+    $message = $_POST[‘message’];
+    if (!preg_match(“/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i”, $email_address))
+    {
+    $errors .= “\n Error: Invalid email address”;
+    }
+    if( empty($errors))
+    {
+    $to = $myemail;
+    $email_subject = “Contact form submission: $name”;
+    $email_body = “You have received a new message. “.
+    ” Here are the details:\n Name: $name \n “.
+    “Email: $email_address\n Message \n $message”;
+    $headers = “From: $myemail\n”;
+    $headers .= “Reply-To: $email_address”;
+    mail($to,$email_subject,$email_body,$headers);
+    //redirect to the ‘thank you’ page
+    header(‘Location: contact-form-thank-you.html’);
+    }
+?>
+  
 <!-- End page content -->
 </div>
 
