@@ -17,14 +17,15 @@ body {font-size:16px;}
 <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
   <div class="w3-container">
-    <h3 class="w3-padding-64"><b>OPRF<br>Robotics</b></h3>
+    <!--<h3 class="w3-padding-64"><b>OPRF<br>Robotics</b></h3>-->
+    <img src="https://user-images.githubusercontent.com/71569474/93714722-3b481780-fb2a-11ea-9727-5175666afd85.png" alt="Club Logo" style="width:80%">
   </div>
   <div class="w3-bar-block">
     <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About Robotics Club</a> 
     <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Current Season</a> 
     <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Our Members</a> 
     <!--<a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Fundraiser</a> -->
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Joining</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Join</a>
   </div>
 </nav>
 
@@ -42,9 +43,6 @@ body {font-size:16px;}
 
   <!-- Header -->
   <div class="w3-container" style="margin-top:80px" id="showcase">
-    <p> 
-          <img src="https://user-images.githubusercontent.com/71569474/93714722-3b481780-fb2a-11ea-9727-5175666afd85.png" alt="Club Logo" style="float:right;width:100px;height:100px;">
-    </p>
     <h1 class="w3-jumbo"><b>OPRF Robotics</b></h1>
     <h1 class="w3-xxxlarge w3-text-red"><b>About Robotics Club</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
@@ -52,14 +50,6 @@ body {font-size:16px;}
     <h4>OUR CLUB</h4>
     <p>OPRF Robotics is a student-led club and a chance to improve STEM skills in a collaborative environment. We offer a unique mix of engineering,  technical abilities, computer science, leadership, teamwork, and competition; Club members work in teams of 4-6 to design, build, and operate robots. Varsity teams then pit their robots against other schools while Junior Varsity teams compete in-house.
     </p>
-
-    <iframe 
-            width="560" 
-            height="315"
-            margin-left: auto;
-            margin-right: auto;
-            src="https://drive.google.com/file/d/1lE1SCZP2OHUJ2s-x6Dl4vZ9yxJThn9F3/preview">
-    </iframe>
     
     <h4>MEETING SCHEDULE</h4>
     <p>Currently, Robotics Club via Zoom on Thursdays at 3:30. Varsity team members must come to every meeting; JV members are welcome to attend as often as they are able.
@@ -72,16 +62,19 @@ body {font-size:16px;}
   
   <!-- Photo grid (modal) -->
   <div class="w3-row-padding">
-    <div class="w3-half">
-      <img src="https://user-images.githubusercontent.com/71569474/93714632-b957ee80-fb29-11ea-8839-fa5cb4b0a0a5.jpg" style="width:40%;hieght:40%" onclick="onClick(this)" alt="Team 1">
-      <img src="https://user-images.githubusercontent.com/71569474/93714663-f0c69b00-fb29-11ea-819b-7745d45c3e7a.jpg" style="width:40%;hieght:40%" onclick="onClick(this)" alt="Team 2">
-      <img src="https://user-images.githubusercontent.com/71569474/93714684-0b990f80-fb2a-11ea-972b-cb35bdd25827.jpg" style="width:40%;hieght:40%" onclick="onClick(this)" alt="Team 3">
+    <div class="w3-third">
+      <img src="https://user-images.githubusercontent.com/71569474/93714714-397e5400-fb2a-11ea-9be9-2e422299c840.jpg" style="width:100%" onclick="onClick(this)" alt="Robot Maintenance">
+      <img src="https://user-images.githubusercontent.com/71569474/93714663-f0c69b00-fb29-11ea-819b-7745d45c3e7a.jpg" style="width:100%" onclick="onClick(this)" alt="Strategy Meeting">      
+    </div>
+    
+    <div class="w3-thrid">
+      <img src="https://user-images.githubusercontent.com/71569474/93714715-397e5400-fb2a-11ea-9704-7d8fa4b040ce.jpg" style="width:100%" onclick="onClick(this)" alt="Practice Field">
+      <img src="https://user-images.githubusercontent.com/71569474/93714684-0b990f80-fb2a-11ea-972b-cb35bdd25827.jpg" style="width:100%" onclick="onClick(this)" alt="Match Queuing">
     </div>
 
-    <div class="w3-half">
-      <img src="https://user-images.githubusercontent.com/71569474/93714714-397e5400-fb2a-11ea-9be9-2e422299c840.jpg" style="width:40%;hieght:40%" onclick="onClick(this)" alt="Team 4">
-      <img src="https://user-images.githubusercontent.com/71569474/93714715-397e5400-fb2a-11ea-9704-7d8fa4b040ce.jpg" style="width:40%;hieght:40%" onclick="onClick(this)" alt="Team 5">
-      <img src="https://user-images.githubusercontent.com/71569474/93714716-3a16ea80-fb2a-11ea-8018-9320e892a45f.jpg" style="width:40%;hieght:40%" onclick="onClick(this)" alt="Team 6">
+    <div class="w3-third">
+     <img src="https://user-images.githubusercontent.com/71569474/93714716-3a16ea80-fb2a-11ea-8018-9320e892a45f.jpg" style="width:100%" onclick="onClick(this)" alt="Tower Takeover Robot">
+     <img src="https://user-images.githubusercontent.com/71569474/93714632-b957ee80-fb29-11ea-8839-fa5cb4b0a0a5.jpg" style="width:100%" onclick="onClick(this)" alt="Match Set-Up">
     </div>
   </div>
 
@@ -103,8 +96,7 @@ body {font-size:16px;}
     </p>   
   
     <iframe 
-            width="560" 
-            height="315" 
+            width="75%"
             margin-left: auto;
             margin-right: auto;
             src="https://www.youtube.com/embed/Hxs0q9UoMDQ" 
@@ -129,9 +121,10 @@ body {font-size:16px;}
     
   <div class="w3-row-padding">
     <div class="w3-half">
-      <img src="https://user-images.githubusercontent.com/71569474/93714718-3a16ea80-fb2a-11ea-825f-9cf842655b7e.JPG" style="width:40%;hieght:40%" onclick="onClick(this)" alt="Alliance Selection">
-      <img src="https://user-images.githubusercontent.com/71569474/93714719-3aaf8100-fb2a-11ea-85cb-83159f4b23ad.jpg" style="width:40%;hieght:40%" onclick="onClick(this)" alt="Playing Field 1">
-      <img src="https://user-images.githubusercontent.com/71569474/93714717-3a16ea80-fb2a-11ea-8656-31a270381a0b.jpg" style="width:40%;hieght:40%" onclick="onClick(this)" alt="Drivers During Match">
+      <img src="https://user-images.githubusercontent.com/71569474/93714718-3a16ea80-fb2a-11ea-825f-9cf842655b7e.JPG" style="width: 100%" onclick="onClick(this)" alt="Alliance Selection">
+    </div>
+    <div class="w3-half">
+      <img src="https://user-images.githubusercontent.com/71569474/93714719-3aaf8100-fb2a-11ea-85cb-83159f4b23ad.jpg" style="width: 100%" onclick="onClick(this)" alt="Playing Field">
     </div>
   </div>
   
@@ -151,7 +144,7 @@ body {font-size:16px;}
   <div class="w3-row-padding w3-grayscale">
     <div class="w3-col m4 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="https://user-images.githubusercontent.com/71569474/93714721-3aaf8100-fb2a-11ea-8404-2b83d3a0eaab.JPG" alt="Phoenix Logo" style="width:250px;height:250px;">
+        <img src="https://user-images.githubusercontent.com/71569474/93714721-3aaf8100-fb2a-11ea-8404-2b83d3a0eaab.JPG" alt="Phoenix Logo" style="width:100%">
         <div class="w3-container">
           <h3>Phoenix</h3>
           <p class="w3-opacity">Emily, Eva, Isaac, Lilly, & Maeve</p>
@@ -161,7 +154,7 @@ body {font-size:16px;}
     </div>
     <div class="w3-col m4 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="https://user-images.githubusercontent.com/71569474/93714720-3aaf8100-fb2a-11ea-8c06-017e605b7064.JPG" alt="Blank" style="width:250px;height:250px;">
+        <img src="https://user-images.githubusercontent.com/71569474/93714720-3aaf8100-fb2a-11ea-8c06-017e605b7064.JPG" alt="Blank" style="width:100%;">
         <div class="w3-container">
           <h3>Error 404</h3>
           <p class="w3-opacity">Members</p>
@@ -171,7 +164,7 @@ body {font-size:16px;}
     </div>
     <div class="w3-col m4 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="https://user-images.githubusercontent.com/71569474/93714720-3aaf8100-fb2a-11ea-8c06-017e605b7064.JPG" alt="Blank" style="width:250px;height:250px;">        
+        <img src="https://user-images.githubusercontent.com/71569474/93714720-3aaf8100-fb2a-11ea-8c06-017e605b7064.JPG" alt="Blank" style="width:100%">        
         <div class="w3-container">
           <h3>???</h3>
           <p class="w3-opacity">Members</p>
@@ -183,7 +176,7 @@ body {font-size:16px;}
   <div class="w3-row-padding w3-grayscale">
     <div class="w3-col m4 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="https://user-images.githubusercontent.com/71569474/93714720-3aaf8100-fb2a-11ea-8c06-017e605b7064.JPG" alt="Blank" style="width:250px;height:250px;">
+        <img src="https://user-images.githubusercontent.com/71569474/93714720-3aaf8100-fb2a-11ea-8c06-017e605b7064.JPG" alt="Blank" style="width:100%;">
         <div class="w3-container">
           <h3>???</h3>
           <p class="w3-opacity">Members</p>
@@ -193,7 +186,8 @@ body {font-size:16px;}
     </div>
     <div class="w3-col m4 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="https://user-images.githubusercontent.com/71569474/93714720-3aaf8100-fb2a-11ea-8c06-017e605b7064.JPG" alt="Blank" style="width:250px;height:250px;">        <div class="w3-container">
+        <img src="https://user-images.githubusercontent.com/71569474/93714720-3aaf8100-fb2a-11ea-8c06-017e605b7064.JPG" alt="Blank" style="width:100%;">       
+        <div class="w3-container">
           <h3>???</h3>
           <p class="w3-opacity">Members</p>
           <p>Bio.</p>
@@ -202,7 +196,8 @@ body {font-size:16px;}
     </div>
     <div class="w3-col m4 w3-margin-bottom">
       <div class="w3-light-grey">
-       <img src="https://user-images.githubusercontent.com/71569474/93714720-3aaf8100-fb2a-11ea-8c06-017e605b7064.JPG" alt="Blank" style="width:250px;height:250px;">        <div class="w3-container">
+       <img src="https://user-images.githubusercontent.com/71569474/93714720-3aaf8100-fb2a-11ea-8c06-017e605b7064.JPG" alt="Blank" style="width:100%;">        
+        <div class="w3-container">
           <h3>???</h3>
           <p class="w3-opacity">Members</p>
           <p>Bio.</p>
@@ -265,6 +260,13 @@ body {font-size:16px;}
     <h1 class="w3-xxxlarge w3-text-red"><b>Join</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <p>It’s not too late to join OPRF Robotics! Go to the <a href="https://campussuite-storage.s3.amazonaws.com/prod/1558748/bd01c7ae-765f-11e9-9402-0a56f8be964e/2158308/d7de2020-f6a3-11ea-a22b-0a19f4b3c3d9/file/2020-2021%20Clubs%20and%20Activities%20Info%20Sheet%20-%20Club%20Info.pdf"> OPRF activities catalog</a> to learn how.</p>
+    
+     <iframe 
+          width="75%" 
+          margin-left: auto;
+          margin-right: auto;
+          src="https://drive.google.com/file/d/1lE1SCZP2OHUJ2s-x6Dl4vZ9yxJThn9F3/preview">
+    </iframe>
     
     <!--<form action="/action_page.php" target="_blank">
       <div class="w3-section">
